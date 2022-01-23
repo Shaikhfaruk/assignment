@@ -1,5 +1,5 @@
 // *******Pattern****** //
-// WAP to print 1 to 5 table using While loop
+// WAP to print 1 to 5 table using Do While loop
 
 #include <stdio.h>
 
@@ -7,11 +7,10 @@ int main()
 {
     int a = 1, b, c = 5;
 
-    while (a <= c)
+    do
     {
-
         b = a;
-        while (b <= c)
+        do
         {
             if (a == 1 || b == a || b == c)
             {
@@ -22,10 +21,10 @@ int main()
                 printf(" ");
             }
             b++;
-        }
+        } while (b <= c);
         a++;
         printf("\n");
-    }
+    } while (a <= c);
 
     return 0;
 }
