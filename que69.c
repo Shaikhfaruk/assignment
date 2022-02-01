@@ -3,14 +3,14 @@
 int main()
 {
     int n, i, j;
-
-    printf("Enter The number: ");
+    printf(" Enter a Number for : ");
     scanf("%d", &n);
-
-    for (i = n; i >= 1; i--)
+    do
     {
-        for (j = 1; j <= i; j++)
+        i = n;
+        do
         {
+            j = 1;
             if (j == 1 || j == i || i == n)
             {
                 printf("%d", j);
@@ -19,9 +19,10 @@ int main()
             {
                 printf(" ");
             }
-        }
-        printf("\n");
-    }
+            j++;
+        } while (i <= j);
+        i--;
+    } while (i >= 1);
 
     return 0;
 }
